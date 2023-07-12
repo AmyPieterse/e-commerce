@@ -10,7 +10,9 @@
 <script>
     import Product from '@/components/product.vue'
     export default {
-        Product
+        components:{
+            Product
+        }
     }
 </script>
 

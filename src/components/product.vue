@@ -1,7 +1,7 @@
 <template>
     <div v-for="product in products" :key="product.id" class="col-lg-3 col-md-6 col-sm-12 mb-md-2 d-flex justify-content-center align-items-center">
         <div class="card d-flex justify-content-center">
-            <img :src="product.image" class="card-img-top imageSize" alt="Product Image">
+            <img :src="product.image" class="card-img-top imageSize img-fluid" alt="Product Image">
             <div class="card-body">
                 
                 <h5 class="card-title">{{product.title}}</h5>
@@ -25,7 +25,7 @@ export default {
             }
         },
         created(){
-            this.fetchProducts();
+            this.$store.dispatch('fetchProducts');
         },
         methods:{
             fetchProducts(){
@@ -36,5 +36,8 @@ export default {
 </script>
 
 <style scoped>
+    .imageSize{
+        width: 300px;
+    }
 
 </style>

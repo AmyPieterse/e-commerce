@@ -13,7 +13,7 @@ export default createStore({
     }
   },
   mutations: {
-    setProduct(state,products){
+    setProducts(state,products){
       state.products = products;
     },
     addProduct(state,products){
